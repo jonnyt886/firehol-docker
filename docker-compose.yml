@@ -1,0 +1,9 @@
+version: '3'
+services:
+        firehol:
+                build: .
+                volumes:
+                - "/etc/firehol/firehol.conf:/etc/firehol/firehol.conf"
+                privileged: true
+                network_mode: "host"
+                command: "start"
